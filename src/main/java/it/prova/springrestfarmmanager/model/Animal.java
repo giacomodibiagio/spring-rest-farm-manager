@@ -10,6 +10,9 @@ public class Animal {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "race")
+    private String race;
+
     @Column(name = "name")
     private String name;
 
@@ -40,5 +43,13 @@ public class Animal {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getRace() {
+        return race;
+    }
+
+    public void setRace(String race) {
+        this.race = race;
     }
 }
