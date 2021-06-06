@@ -13,6 +13,11 @@ public class Animal {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "imageUrl")
+    private String imageUrl;
+
+
+
     public Long getId() {
         return id;
     }
@@ -27,5 +32,13 @@ public class Animal {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

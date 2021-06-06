@@ -34,12 +34,10 @@ public class AnimalController {
         return new ResponseEntity<>(animalInstance, HttpStatus.CREATED);
     }
 
-    @PutMapping("/update/{id}")
-    public ResponseEntity<Animal> update(@Valid @RequestBody Animal animal, @PathVariable("id") Long id) {
-        animal.setId(id);
-        service.aggiorna(animal);
-        Animal animalModificato = animal;
-        return new ResponseEntity<>(animalModificato, HttpStatus.OK);
+    @PutMapping("/update")
+    public ResponseEntity<Animal> updateEmployee(@RequestBody Animal animal) {
+        Animal updateEmployee = service.aggiorna(animal);
+        return new ResponseEntity<>(updateEmployee, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{id}")

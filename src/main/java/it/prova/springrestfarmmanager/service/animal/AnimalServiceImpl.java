@@ -12,7 +12,7 @@ import java.util.List;
 @Transactional
 public class AnimalServiceImpl implements AnimalService{
     @Autowired
-    private AnimalRepository repository;
+    private AnimalRepository    repository;
 
     @Override
     public List<Animal> listAll() {
